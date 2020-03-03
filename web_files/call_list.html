@@ -1,0 +1,29 @@
+
+{% for d in data %}
+        <a id="{{ d }}"  class="get_content list-group-item list-group-item-action bg-light">{{ d }}</a>
+{% endfor %}
+
+
+<script>
+
+
+    $( ".get_content" ).click(function() {
+
+        var text = $(this).attr('id');
+        console.log(text)
+
+            $.ajax({
+              url: "/get_call_info",
+              type: "get",
+              data: {jsdata: text},
+              success: function(response) {
+                $("#content_container").html(response);
+              },
+              error: function(xhr) {
+                console.log("err")
+              }
+            });
+        });
+
+
+</script>

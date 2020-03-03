@@ -1,0 +1,31 @@
+**Design**
+
+Record structure
+
+patient
+	uuid
+	name
+		family
+		given
+	telecoms
+		system
+		number
+		use
+	gender
+	address
+		lines
+		city
+		state
+		postal_code
+		country
+	marital_status
+		marital_status
+	multiple_birth
+	communications
+		languages
+		codes
+	identifier
+		DL
+		SS
+		MR
+
