@@ -1,0 +1,206 @@
+<!--CREDIT https://bootsnipp.com/snippets/XaXB0-->
+
+<h2>Add a new group - provide filters as necessary</h2>
+<br>
+<form action="/generate_new_list" name="gen_form" method="post">
+<button id="submit" name="submit" type="submit" class="btn btn-primary">Submit</button>
+
+
+
+    <div class="col-xs-12">
+
+
+
+
+
+
+            <h3>Name of group</h3>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="list_name">Group Name</label>
+  <div class="col-md-5">
+  <input id="list_name" name="list_name" type="text" placeholder="Group name" class="form-control input-md">
+
+
+  </div>
+</div>
+
+
+
+
+
+    <h3>Name</h3>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="first">First Name</label>
+  <div class="col-md-5">
+  <input id="first" name="first_name" type="text" placeholder="First" class="form-control input-md">
+      <br>
+      <select name = "select_first_name" class="form-control">
+
+        <option>Contains</option>
+        <option>Exact</option>
+    </select>
+
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="last">Last Name</label>
+  <div class="col-md-5">
+      <input id="last" name="last_name" type="text" placeholder="Last" class="form-control input-md">
+      <br>
+      <select name="select_last_name" class="form-control">
+
+        <option>Contains</option>
+        <option>Exact</option>
+    </select>
+  </div>
+</div>
+
+
+    <h3>Sex</h3>
+    <div class="form-group">
+  <div class="col-md-5">
+      <select name = "gender" class="form-control">
+        <option></option>
+        <option>Male</option>
+        <option>Female</option>
+    </select>
+  </div></div>
+
+
+    <h3>Address</h3>
+
+    <div class="form-group">
+        <label class="col-md-4 control-label" for="lines">Lines</label>
+        <div class="col-md-5">
+      <input id="lines" name="house" type="text" placeholder="Lines" class="form-control input-md">
+        <br>
+      <select name="select_house" class="form-control">
+        <option>Exact</option>
+        <option>Contains</option>
+    </select>
+  </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-md-4 control-label" for="city">City</label>
+        <div class="col-md-5">
+      <input id="city" name="city" type="text" placeholder="City" class="form-control input-md">
+        <br>
+      <select name="select_city" class="form-control">
+        <option>Exact</option>
+        <option>Contains</option>
+    </select>
+  </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-md-4 control-label" for="state">State</label>
+        <div class="col-md-5">
+      <input id="state" name="state" type="text" placeholder="State" class="form-control input-md">
+        <br>
+      <select name="select_state" class="form-control">
+        <option>Exact</option>
+        <option>Contains</option>
+    </select>
+  </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-md-4 control-label" for="postal_code">Post code</label>
+        <div class="col-md-5">
+      <input id="postal_code" name="postal_code" type="text" placeholder="Post code" class="form-control input-md">
+        <br>
+      <select name="select_postal_code" class="form-control">
+        <option>Exact</option>
+        <option>Contains</option>
+    </select>
+  </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-md-4 control-label" for="country">Country</label>
+        <div class="col-md-5">
+      <input id="country" name="country" type="text" placeholder="Country" class="form-control input-md">
+        <br>
+      <select name="select_country" class="form-control">
+        <option>Exact</option>
+        <option>Contains</option>
+    </select>
+  </div>
+    </div>
+
+    <h3>Birth date</h3>
+
+    <div class="form-group">
+        <label class="col-md-4 control-label" for="birth_day">Day</label>
+        <div class="col-md-5">
+      <input id="birth_day" name="birth_day" type="number" placeholder="Day" class="form-control input-md">
+        <br>
+      <select name="select_birth_day" class="form-control">
+        <option>Greater than</option>
+        <option>Less than</option>
+          <option>Exact</option>
+          <option>Contains</option>
+    </select>
+  </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-md-4 control-label" for="birth_month">Month</label>
+        <div class="col-md-5">
+      <input id="birth_month" name="birth_month" type="number" placeholder="Month" class="form-control input-md">
+        <br>
+      <select name="select_birth_month" class="form-control">
+        <option>Greater than</option>
+        <option>Less than</option>
+          <option>Exact</option>
+          <option>Contains</option>
+    </select>
+  </div>
+
+    </div>
+    <div class="form-group">
+        <label class="col-md-4 control-label" for="birth_year">Year</label>
+        <div class="col-md-5">
+      <input id="birth_year" name="birth_year" type="number" placeholder="Year" class="form-control input-md">
+        <br>
+      <select name="select_birth_year" class="form-control">
+        <option>Greater than</option>
+        <option>Less than</option>
+          <option>Exact</option>
+          <option>Contains</option>
+    </select>
+  </div>
+    </div>
+
+        </div>
+    <div class="form-group">
+        <label class="col-md-4 control-label" for="age">Age</label>
+        <div class="col-md-5">
+      <input id="age" name="age" type="number" placeholder="Age" class="form-control input-md">
+        <br>
+      <select name="select_age" class="form-control">
+        <option>Greater than</option>
+        <option>Less than</option>
+          <option>Exact</option>
+          <option>Contains</option>
+    </select>
+  </div>
+    </div>
+
+
+
+
+
+</div>
+
+<br>
+<br><br><br>
+</form>
+
+

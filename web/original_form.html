@@ -1,0 +1,74 @@
+<!--CREDIT https://bootsnipp.com/snippets/XaXB0-->
+
+<h2>Add a new group</h2>
+<form action="/generate_new_list" name="gen_form" method="post">
+<div class="col-xs-12">
+<div class="col-md-12" >
+    <h3> Actions</h3>
+    <div id="field">
+    <div id="field0">
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="action_id">Action Id</label>
+  <div class="col-md-5">
+  <input id="action_id" name="action_id" type="text" placeholder="" class="form-control input-md">
+
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="action_name">Action Name</label>
+  <div class="col-md-5">
+  <input id="action_name" name="action_name" type="text" placeholder="" class="form-control input-md">
+
+  </div>
+</div>
+<br><br>
+       <!-- File Button -->
+
+</div>
+</div>
+<!-- Button -->
+<div class="form-group">
+  <div class="col-md-4">
+    <button id="add-more" name="add-more" class="btn btn-primary">Add More</button>
+  </div>
+</div>
+<br><br>
+
+</div>
+</div>
+
+<button id="submit" name="submit" type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+<script>
+
+    $(document).ready(function () {
+    //@naresh action dynamic childs
+    var next = 0;
+    $("#add-more").click(function(e){
+        e.preventDefault();
+        var addto = "#field" + next;
+        var addRemove = "#field" + (next);
+        next = next + 1;
+        var newIn = ' <div id="field'+ next +'" name="field'+ next +'"><!-- Text input--><div class="form-group"> <label class="col-md-4 control-label" for="action_id">Action Id</label> <div class="col-md-5"> <input id="action_id" name="action_id" type="text" placeholder="" class="form-control input-md"> </div></div><br><br> <!-- Text input--><div class="form-group"> <label class="col-md-4 control-label" for="action_name">Action Name</label> <div class="col-md-5"> <input id="action_name" name="action_name" type="text" placeholder="" class="form-control input-md"> </div></div><br><br><!-- File Button --> <div class="form-group"> <label class="col-md-4 control-label" for="action_json">Action JSON File</label> <div class="col-md-4"> <input id="action_json" name="action_json" class="input-file" type="file"> </div></div></div>';
+        var newInput = $(newIn);
+        var removeBtn = '<button id="remove' + (next - 1) + '" class="btn btn-danger remove-me" >Remove</button></div></div><div id="field">';
+        var removeButton = $(removeBtn);
+        $(addto).after(newInput);
+        $(addRemove).after(removeButton);
+        $("#field" + next).attr('data-source',$(addto).attr('data-source'));
+        $("#count").val(next);
+
+            $('.remove-me').click(function(e){
+                e.preventDefault();
+                var fieldNum = this.id.charAt(this.id.length-1);
+                var fieldID = "#field" + fieldNum;
+                $(this).remove();
+                $(fieldID).remove();
+            });
+    });
+
+});
+</script>

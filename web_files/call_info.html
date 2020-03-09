@@ -1,4 +1,38 @@
 <br>
+
+<style>
+        .tooltip  {
+          width: 120px;
+          bottom: 100%;
+          left: 50%;
+          margin-left: -60px; /* Use half of the width (120/2 = 60), to center the tooltip */
+}
+</style>
 {% for d in data %}
-        <a class="list-group-item list-group-item-action bg-light">{{ d }}</a>
+        <div class="list-group-item list-group-item-action bg-light">{{ d|safe }}</div>
 {% endfor %}
+
+
+
+<script>
+
+
+
+    $( ".called" ).click(function() {
+
+        var text = $(this).attr('id');
+        console.log(text)
+
+            $.ajax({
+              url: "/set_call_complete",
+              type: "get",
+              data: {jsdata: text},
+              success: function(response) {
+                $("#content_container").html(response);
+              },
+              error: function(xhr) {
+                console.log("err")
+              }
+            });
+        });
+</script>

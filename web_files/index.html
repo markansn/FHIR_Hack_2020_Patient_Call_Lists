@@ -162,6 +162,24 @@
     });
 });
 
+    $( "#add-new-list" ).click(function() {
+
+        var text = $(this).attr('id');
+        console.log(text)
+
+            $.ajax({
+              url: "/add_new_list",
+              type: "get",
+              data: {jsdata: text},
+              success: function(response) {
+                $("#content_container").html(response);
+              },
+              error: function(xhr) {
+                console.log("err")
+              }
+            });
+        });
+
 
 
 

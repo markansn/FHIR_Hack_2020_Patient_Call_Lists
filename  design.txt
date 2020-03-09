@@ -20,6 +20,10 @@ patient
 		country
 	marital_status
 		marital_status
+	birth_date
+		Year
+		Month
+		Day
 	multiple_birth
 	communications
 		languages
