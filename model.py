@@ -96,8 +96,8 @@ class Model:
 		#todo fix this shitty code
 		for patient in self.patients:
 			patient_dict = self.generate_patient_dict(patient)
-			for item in patient_dict:
-				print(patient_dict[item])
+
+
 			passed = True
 			for key in query:
 				info = str(query[key][0])

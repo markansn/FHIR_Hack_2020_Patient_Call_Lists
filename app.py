@@ -16,7 +16,7 @@ def assemble_call_info_display(name):
 		address = patient[0].addresses[0].lines[0] + ', ' + patient[0].addresses[0].city + ', ' + patient[0].addresses[0].state + ', ' + patient[0].addresses[0].country + ', ' + patient[0].addresses[0].postal_code
 		if patient[1]:
 			patient_display.append(Markup(
-				"<button style=\"text-decoration: line-through\">" + patient[0].full_name() + "</button>") + " | " + Markup(
+				"<ee style=\"text-decoration: line-through\" data-toggle=\"tooltip\" data-placement=\"top\" title=\"" + "DOB: " + dob + " | " + address + "\" >" + patient[0].full_name() + "</ee>") + " | " + Markup(
 				"<a href=\"skype:" + patient[0].telecoms[0].number + "?call\">Call " +patient[0].telecoms[0].number +"</a>") + " | " + Markup(
 				"<a class=\"called\" href=\"#\"  id=\"" + patient[0].uuid + "__and__" + name + "\">Uncomplete</a>"))
 		else:
@@ -75,7 +75,7 @@ def generate_new_list():
 			else:
 				query[item] = [request.form[item], request.form["select_" + item].split(" ")[0].lower()]
 
-	print(query)
+
 
 	model.save_patient_list(model.get_patient_details_from_query(query), request.form["list_name"].replace(" ", "_").lower())
 
