@@ -1,16 +1,17 @@
 import pickle
 import glob
 from fhir_parser import FHIR
-from tqdm import tqdm
 import datetime
 import os
+
+
 class Model:
 	fhir = FHIR()
 	patients = fhir.get_all_patients()
 	patient_lists = []
-	def __init__(self):
-	   self.patient_lists = self.get_all_patient_lists()
 
+	def __init__(self):
+		self.patient_lists = self.get_all_patient_lists()
 
 
 	def get_all_patient_lists(self):
@@ -22,6 +23,7 @@ class Model:
 			file = file.replace("_", " ")
 			l.append(file)
 		return l
+
 	#
 	# def get_patient_details_from_name(self, firstname, surname):
 	# 	patients_with_name = []
@@ -32,7 +34,6 @@ class Model:
 	#
 	# 	return patients_with_name
 	#
-
 
 	def update_complete(self, filename, uuid):
 		patient_list = self.fetch_patient_list(filename)
@@ -49,29 +50,21 @@ class Model:
 		self.delete_patient_list(filename)
 		self.save_patient_list(patient_list, filename)
 
-
-
-
-
 	def save_patient_list(self, list, filename):
 		files = glob.glob("saved_lists/*")
 		for file in files:
 			if os.path.join("saved_lists", filename + "." + "pickle") == file:
-
 				return False
 
-
-		with open("saved_lists/"+filename+".pickle", 'wb') as handle:
+		with open("saved_lists/" + filename + ".pickle", 'wb') as handle:
 			pickle.dump(list, handle, protocol=pickle.HIGHEST_PROTOCOL)
 
 		return True
 
-
 	def fetch_patient_list(self, filename):
 
-			path = os.path.join("saved_lists", filename + "." + "pickle")
-			return self.get_pickle(path)
-
+		path = os.path.join("saved_lists", filename + "." + "pickle")
+		return self.get_pickle(path)
 
 	def get_pickle(self, path):
 		try:
@@ -82,8 +75,7 @@ class Model:
 		except FileNotFoundError:
 			return []
 
-
-	def delete_patient_list(self,filename):
+	def delete_patient_list(self, filename):
 		try:
 			os.remove(os.path.join("saved_lists", filename + "." + "pickle"))
 		except FileNotFoundError:
@@ -93,10 +85,9 @@ class Model:
 
 	def get_patient_details_from_query(self, query):
 		patients = []
-		#todo fix this shitty code
+		# todo fix this shitty code
 		for patient in self.patients:
 			patient_dict = self.generate_patient_dict(patient)
-
 
 			passed = True
 			for key in query:
@@ -130,14 +121,9 @@ class Model:
 					break
 
 			if passed:
-
 				patients.append([patient, False])
 
 		return patients
-
-
-
-
 
 	def generate_patient_dict(self, p):
 
@@ -146,17 +132,16 @@ class Model:
 			'uuid': p.uuid,
 			'first_name': ''.join([i for i in p.name.given if not i.isdigit()]),
 			'last_name': ''.join([i for i in p.name.family if not i.isdigit()]),
-			'gender':p.gender,
-			'birth_year':p.birth_date.year,
-			'birth_month':p.birth_date.month,
-			'birth_day':p.birth_date.day,
-			'age':today.year - p.birth_date.year - ((today.month, today.day) < (p.birth_date.month, p.birth_date.day)),
+			'gender': p.gender,
+			'birth_year': p.birth_date.year,
+			'birth_month': p.birth_date.month,
+			'birth_day': p.birth_date.day,
+			'age': today.year - p.birth_date.year - ((today.month, today.day) < (p.birth_date.month, p.birth_date.day)),
 			'house': p.addresses[0].lines[0],
 			'city': p.addresses[0].city,
-			'state':p.addresses[0].state,
-			'postal_code':p.addresses[0].postal_code,
-			'country':p.addresses[0].country,
-			'marital_status':p.marital_status.marital_status,
-			'language':p.communications.languages[0]
+			'state': p.addresses[0].state,
+			'postal_code': p.addresses[0].postal_code,
+			'country': p.addresses[0].country,
+			'marital_status': p.marital_status.marital_status,
+			'language': p.communications.languages[0]
 		}
-

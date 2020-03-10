@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, Markup
-import requests
-from bs4 import BeautifulSoup
+
+
 import model
 
 app = Flask(__name__, template_folder='web_files')
