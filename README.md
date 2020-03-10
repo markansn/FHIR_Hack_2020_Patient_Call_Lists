@@ -54,7 +54,7 @@ depending on how your environment is set up.
 
 ## Authors
 
-* **Mark Anson** - *Initial work* - [Website](markanson.co)
+* **Mark Anson** - *Initial work* - [Website](http://markanson.co)
 
 
 ## License
