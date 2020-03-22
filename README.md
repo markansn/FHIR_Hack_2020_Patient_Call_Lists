@@ -8,7 +8,7 @@ A form is used to generate a list of patients against a set of filters, from the
 track of who has been called already and who still needs to be contacted. 
 
 
-##Features
+## Features
 
 This app is a proof of concept for this idea. This is what the app looks like, with a few lists I have already generated. 
 

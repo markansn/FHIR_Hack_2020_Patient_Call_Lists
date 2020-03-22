@@ -1,28 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bb8bf453-3cef-4d4e-ae6f-fbf6b82a318d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/readme_images/1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/readme_images/2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/readme_images/3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/readme_images/4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/readme_images/5.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template_web_files/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/template_web_files/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/FHIR_Parser-0.1.4.dist-info/INSTALLER" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/FHIR_Parser-0.1.4.dist-info/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/FHIR_Parser-0.1.4.dist-info/METADATA" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/FHIR_Parser-0.1.4.dist-info/RECORD" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/FHIR_Parser-0.1.4.dist-info/WHEEL" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/FHIR_Parser-0.1.4.dist-info/top_level.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/fhir_parser/fhir.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/fhir_parser/fhir.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/fhir_parser/parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/fhir_parser/parser.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/pip-selfcheck.json" beforeDir="false" afterPath="$PROJECT_DIR$/venv/pip-selfcheck.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web_files/call_info.html" beforeDir="false" afterPath="$PROJECT_DIR$/web_files/call_info.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web_files/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web_files/index.html" afterDir="false" />
-    </list>
+    <list default="true" id="bb8bf453-3cef-4d4e-ae6f-fbf6b82a318d" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -408,12 +387,12 @@
   <component name="ToolWindowManager">
     <frame x="1773" y="28" width="1680" height="1027" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14468865" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14468865" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4957265" visible="true" weight="0.32941177" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4957265" weight="0.32941177" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -423,7 +402,7 @@
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50427353" side_tool="true" weight="0.32941177" />
       <window_info anchor="bottom" id="Concurrent Activities Diagram" order="11" sideWeight="0.4993895" weight="0.32941177" />
-      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.4969475" weight="0.3272727" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="12" sideWeight="0.4969475" visible="true" weight="0.3272727" />
       <window_info anchor="bottom" id="Python Console" order="13" sideWeight="0.4993895" weight="0.32834226" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
