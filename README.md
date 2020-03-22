@@ -2,14 +2,36 @@
 
 My submission for the UCL FHIR Hack 2020 as part of Systems Engineering.
 
-This web app aims to make the process of calling patients, either for booking appointments, checkups, or any other purpose, much more straightfoward. 
+This web app aims to make the process of calling patients, either for booking appointments, checkups, or any other purpose, much more straightfoward. Some examples of where this be used include setting up vaccinations for groups in particular areas and age ranges, or following up with patients that have been released from care.
 
 A form is used to generate a list of patients against a set of filters, from there, a patient can be called directly through embedded Skype URIs and checked off. This allows medical staff to keep
 track of who has been called already and who still needs to be contacted. 
 
+
+##Features
+
+This app is a proof of concept for this idea. This is what the app looks like, with a few lists I have already generated. 
+
+
+![Homescreen](readme_images/1.png)
+Homescreen of application
+
+![Homescreen](readme_images/2.png)
+Selected group
+
+![Homescreen](readme_images/3.png)
+Mouse hover over patient name
+
+![Homescreen](readme_images/4.png)
+Pressing "Complete" link
+
+![Homescreen](readme_images/5.png)
+Form to generate new list
+
+
+
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
 ### Prerequisites
 
@@ -30,7 +52,6 @@ User greenfrogs created a fork of this repository, which disables HTTPS and incl
 The deployment guide featured in the repository explains how to get the server up and running.
 
 
-End with an example of getting some data out of the system or using it for a little demo
 
 
 ## Deployment

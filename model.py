@@ -1,6 +1,7 @@
 import pickle
 import glob
 from fhir_parser import FHIR
+from tqdm import tqdm
 import datetime
 import os
 
